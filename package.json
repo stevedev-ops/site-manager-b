@@ -4,7 +4,7 @@
   "description": "Construction Site Management System Backend",
   "main": "dist/server.js",
   "scripts": {
-    "dev": "sh -c \"if command -v nodemon >/dev/null 2>&1; then nodemon src/server.ts; elif command -v ts-node >/dev/null 2>&1; then ts-node src/server.ts; else node dist/server.js; fi\"",
+    "dev": "nodemon src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
     "prisma:generate": "prisma generate",
@@ -24,8 +24,6 @@
     "jsonwebtoken": "^9.0.2",
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.7",
-    "winston": "^3.18.3",
-    "winston-daily-rotate-file": "^4.7.1",
     "zod": "^3.22.4"
   },
   "devDependencies": {
@@ -34,7 +32,7 @@
     "@types/express": "^4.17.21",
     "@types/jsonwebtoken": "^9.0.5",
     "@types/multer": "^1.4.11",
-    "@types/node": "^20.19.25",
+    "@types/node": "^20.10.5",
     "@types/nodemailer": "^6.4.14",
     "nodemon": "^3.0.2",
     "prisma": "^5.7.0",

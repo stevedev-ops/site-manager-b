@@ -14,6 +14,9 @@ const report_routes_1 = __importDefault(require("./report.routes"));
 const task_routes_1 = __importDefault(require("./task.routes"));
 const document_routes_1 = __importDefault(require("./document.routes"));
 const log_routes_1 = __importDefault(require("./log.routes"));
+const notification_routes_1 = __importDefault(require("./notification.routes"));
+const milestone_routes_1 = __importDefault(require("./milestone.routes"));
+const analytics_routes_1 = __importDefault(require("./analytics.routes"));
 const router = (0, express_1.Router)();
 // Mount routes
 router.use('/auth', auth_routes_1.default);
@@ -26,6 +29,9 @@ router.use('/reports', report_routes_1.default);
 router.use('/tasks', task_routes_1.default);
 router.use('/documents', document_routes_1.default);
 router.use('/logs', log_routes_1.default);
+router.use('/notifications', notification_routes_1.default);
+router.use('/milestones', milestone_routes_1.default);
+router.use('/analytics', analytics_routes_1.default);
 // Health check
 router.get('/health', (req, res) => {
     res.json({ status: 'ok', timestamp: new Date().toISOString() });

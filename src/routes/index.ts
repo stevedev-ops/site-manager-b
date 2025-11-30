@@ -10,6 +10,9 @@ import reportRoutes from './report.routes';
 import taskRoutes from './task.routes';
 import documentRoutes from './document.routes';
 import logRoutes from './log.routes';
+import notificationRoutes from './notification.routes';
+import milestoneRoutes from './milestone.routes';
+import analyticsRoutes from './analytics.routes';
 
 const router = Router();
 
@@ -24,6 +27,9 @@ router.use('/reports', reportRoutes);
 router.use('/tasks', taskRoutes);
 router.use('/documents', documentRoutes);
 router.use('/logs', logRoutes);
+router.use('/notifications', notificationRoutes);
+router.use('/milestones', milestoneRoutes);
+router.use('/analytics', analyticsRoutes);
 
 // Health check
 router.get('/health', (req, res) => {

@@ -26,3 +26,9 @@
 {"level":"error","message":"API error","meta":{"message":"Request failed with status code 401","method":"post","status":401,"url":"/auth/login"},"timestamp":"2025-11-30T16:39:28.240Z"}
 {"level":"error","message":"API error","meta":{"message":"Request failed with status code 403","method":"get","status":403,"url":"/users"},"timestamp":"2025-11-30T16:40:45.901Z"}
 {"level":"error","message":"API error","meta":{"message":"Request failed with status code 403","method":"get","status":403,"url":"/users"},"timestamp":"2025-11-30T16:40:45.916Z"}
+{"level":"error","message":"API error","meta":{"message":"Request failed with status code 403","method":"get","status":403,"url":"/users"},"timestamp":"2025-11-30T20:56:44.612Z"}
+{"level":"error","message":"API error","meta":{"message":"Request failed with status code 403","method":"get","status":403,"url":"/users"},"timestamp":"2025-11-30T20:56:44.633Z"}
+{"level":"error","message":"API error","meta":{"message":"Request failed with status code 404","method":"get","status":404,"url":"/resources"},"timestamp":"2025-11-30T20:57:35.849Z"}
+{"level":"error","message":"API error","meta":{"message":"Request failed with status code 404","method":"get","status":404,"url":"/resources"},"timestamp":"2025-11-30T20:57:35.867Z"}
+{"level":"error","message":"API error","meta":{"message":"Request failed with status code 404","method":"get","status":404,"url":"/resources"},"timestamp":"2025-11-30T20:57:39.360Z"}
+{"level":"error","message":"API error","meta":{"message":"Request failed with status code 404","method":"get","status":404,"url":"/resources"},"timestamp":"2025-11-30T20:57:39.406Z"}

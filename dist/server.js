@@ -11,7 +11,11 @@ const rateLimiter_1 = require("./middleware/rateLimiter");
 const routes_1 = __importDefault(require("./routes"));
 const app = (0, express_1.default)();
 // Middleware
-app.use((0, cors_1.default)({ origin: env_1.config.cors.origin, credentials: true }));
+// Middleware
+app.use((0, cors_1.default)({
+    origin: [env_1.config.cors.origin, 'http://localhost:3000', 'http://localhost:5173'],
+    credentials: true
+}));
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
 // Global rate limiter
