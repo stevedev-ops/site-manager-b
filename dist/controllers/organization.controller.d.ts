@@ -1,0 +1,10 @@
+import { Request, Response } from 'express';
+export declare class OrganizationController {
+    create(req: Request, res: Response): Promise<void>;
+    findAll(req: Request, res: Response): Promise<void>;
+    findById(req: Request, res: Response): Promise<void>;
+    update(req: Request, res: Response): Promise<void>;
+    delete(req: Request, res: Response): Promise<void>;
+    getStats(req: Request, res: Response): Promise<void>;
+}
+//# sourceMappingURL=organization.controller.d.ts.map

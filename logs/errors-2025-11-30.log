@@ -1,0 +1,28 @@
+{"level":"error","message":"Uncaught error","meta":{"colno":88,"filename":"http://localhost:3001/src/routes.tsx?t=1764519190770","lineno":299,"message":"Uncaught ReferenceError: SubAdminDashboard is not defined"},"timestamp":"2025-11-30T16:13:11.443Z"}
+{"level":"error","message":"Uncaught error","meta":{"colno":88,"filename":"http://localhost:3001/src/routes.tsx?t=1764519190770","lineno":299,"message":"Uncaught ReferenceError: SubAdminDashboard is not defined"},"timestamp":"2025-11-30T16:13:11.469Z"}
+{"level":"error","message":"Uncaught error","meta":{"colno":88,"filename":"http://localhost:3001/src/routes.tsx?t=1764519190770","lineno":299,"message":"Uncaught ReferenceError: SubAdminDashboard is not defined"},"timestamp":"2025-11-30T16:13:11.475Z"}
+{"level":"error","message":"Uncaught error","meta":{"colno":88,"filename":"http://localhost:3001/src/routes.tsx?t=1764519190770","lineno":299,"message":"Uncaught ReferenceError: SubAdminDashboard is not defined"},"timestamp":"2025-11-30T16:13:11.483Z"}
+{"level":"error","message":"Uncaught error","meta":{"colno":88,"filename":"http://localhost:3001/src/routes.tsx?t=1764519190770","lineno":299,"message":"Uncaught ReferenceError: SubAdminDashboard is not defined"},"timestamp":"2025-11-30T16:13:11.491Z"}
+{"level":"error","message":"Uncaught error","meta":{"colno":88,"filename":"http://localhost:3001/src/routes.tsx?t=1764519190770","lineno":299,"message":"Uncaught ReferenceError: SubAdminDashboard is not defined"},"timestamp":"2025-11-30T16:13:11.500Z"}
+{"level":"error","message":"Uncaught error","meta":{"colno":88,"filename":"http://localhost:3001/src/routes.tsx?t=1764519190770","lineno":299,"message":"Uncaught ReferenceError: SubAdminDashboard is not defined"},"timestamp":"2025-11-30T16:13:11.512Z"}
+{"level":"error","message":"Unhandled promise rejection","meta":{"reason":{}},"timestamp":"2025-11-30T16:13:11.518Z"}
+{"level":"error","message":"Unhandled promise rejection","meta":{"reason":{}},"timestamp":"2025-11-30T16:13:11.526Z"}
+{"level":"error","message":"Unhandled promise rejection","meta":{"reason":{}},"timestamp":"2025-11-30T16:13:11.534Z"}
+{"level":"error","message":"Uncaught error","meta":{"colno":88,"filename":"http://localhost:3001/src/routes.tsx?t=1764519190770","lineno":299,"message":"Uncaught ReferenceError: SubAdminDashboard is not defined"},"timestamp":"2025-11-30T16:13:11.541Z"}
+{"level":"error","message":"Unhandled promise rejection","meta":{"reason":{}},"timestamp":"2025-11-30T16:13:11.551Z"}
+{"level":"error","message":"Uncaught error","meta":{"colno":256,"filename":"http://localhost:3001/src/pages/admin/Dashboard.tsx?t=1764519619034","lineno":310,"message":"Uncaught ReferenceError: FaUsers is not defined"},"timestamp":"2025-11-30T16:20:20.491Z"}
+{"level":"error","message":"Uncaught error","meta":{"colno":256,"filename":"http://localhost:3001/src/pages/admin/Dashboard.tsx?t=1764519619034","lineno":310,"message":"Uncaught ReferenceError: FaUsers is not defined"},"timestamp":"2025-11-30T16:20:20.511Z"}
+{"level":"error","message":"Unhandled promise rejection","meta":{"reason":{}},"timestamp":"2025-11-30T16:20:20.531Z"}
+{"level":"error","message":"API error","meta":{"message":"Request failed with status code 403","method":"get","status":403,"url":"/organizations"},"timestamp":"2025-11-30T16:39:04.162Z"}
+{"level":"error","message":"API error","meta":{"message":"Request failed with status code 403","method":"get","status":403,"url":"/organizations"},"timestamp":"2025-11-30T16:39:04.178Z"}
+{"level":"error","message":"API error","meta":{"message":"Request failed with status code 403","method":"get","status":403,"url":"/organizations"},"timestamp":"2025-11-30T16:39:05.375Z"}
+{"level":"error","message":"API error","meta":{"message":"Request failed with status code 403","method":"get","status":403,"url":"/organizations"},"timestamp":"2025-11-30T16:39:05.418Z"}
+{"level":"error","message":"API error","meta":{"message":"Request failed with status code 403","method":"get","status":403,"url":"/organizations"},"timestamp":"2025-11-30T16:39:07.056Z"}
+{"level":"error","message":"API error","meta":{"message":"Request failed with status code 403","method":"get","status":403,"url":"/organizations"},"timestamp":"2025-11-30T16:39:07.074Z"}
+{"level":"error","message":"API error","meta":{"message":"Request failed with status code 403","method":"get","status":403,"url":"/organizations"},"timestamp":"2025-11-30T16:39:09.295Z"}
+{"level":"error","message":"API error","meta":{"message":"Request failed with status code 403","method":"get","status":403,"url":"/organizations"},"timestamp":"2025-11-30T16:39:09.314Z"}
+{"level":"error","message":"API error","meta":{"message":"Request failed with status code 403","method":"get","status":403,"url":"/organizations"},"timestamp":"2025-11-30T16:39:12.077Z"}
+{"level":"error","message":"API error","meta":{"message":"Request failed with status code 403","method":"get","status":403,"url":"/organizations"},"timestamp":"2025-11-30T16:39:12.098Z"}
+{"level":"error","message":"API error","meta":{"message":"Request failed with status code 401","method":"post","status":401,"url":"/auth/login"},"timestamp":"2025-11-30T16:39:28.240Z"}
+{"level":"error","message":"API error","meta":{"message":"Request failed with status code 403","method":"get","status":403,"url":"/users"},"timestamp":"2025-11-30T16:40:45.901Z"}
+{"level":"error","message":"API error","meta":{"message":"Request failed with status code 403","method":"get","status":403,"url":"/users"},"timestamp":"2025-11-30T16:40:45.916Z"}
