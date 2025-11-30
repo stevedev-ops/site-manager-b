@@ -4,7 +4,7 @@
   "description": "Construction Site Management System Backend",
   "main": "dist/server.js",
   "scripts": {
-    "dev": "nodemon src/server.ts",
+  "dev": "sh -c \"if command -v nodemon >/dev/null 2>&1; then nodemon src/server.ts; elif command -v ts-node >/dev/null 2>&1; then ts-node src/server.ts; else node dist/server.js; fi\"",
     "build": "tsc",
     "start": "node dist/server.js",
     "prisma:generate": "prisma generate",
