@@ -56,8 +56,11 @@ class SiteController {
         try {
             // Check permission
             const siteToUpdate = await siteService.findById(req.params.id);
+            const isSubAdmin = req.user?.role === types_1.UserRole.SUB_ADMIN;
+            const isAssigned = siteToUpdate.siteUsers.some(su => su.userId === req.user?.id);
             if (req.user?.role !== types_1.UserRole.SUPER_ADMIN &&
-                siteToUpdate.organizationId !== req.user?.organizationId) {
+                siteToUpdate.organizationId !== req.user?.organizationId &&
+                !(isSubAdmin && isAssigned)) {
                 return res.status(403).json({ success: false, error: 'Access denied' });
             }
             const site = await siteService.update(req.params.id, req.body);
@@ -71,8 +74,11 @@ class SiteController {
         try {
             // Check permission
             const siteToDelete = await siteService.findById(req.params.id);
+            const isSubAdmin = req.user?.role === types_1.UserRole.SUB_ADMIN;
+            const isAssigned = siteToDelete.siteUsers.some(su => su.userId === req.user?.id);
             if (req.user?.role !== types_1.UserRole.SUPER_ADMIN &&
-                siteToDelete.organizationId !== req.user?.organizationId) {
+                siteToDelete.organizationId !== req.user?.organizationId &&
+                !(isSubAdmin && isAssigned)) {
                 return res.status(403).json({ success: false, error: 'Access denied' });
             }
             await siteService.delete(req.params.id);

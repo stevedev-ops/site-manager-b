@@ -16,7 +16,7 @@ exports.rateLimiter = (0, express_rate_limit_1.default)({
 // Stricter rate limit for auth endpoints
 exports.authRateLimiter = (0, express_rate_limit_1.default)({
     windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 5, // 5 requests per window
+    max: 50, // 50 requests per window (increased for development)
     message: 'Too many authentication attempts, please try again later.',
     skipSuccessfulRequests: true,
 });

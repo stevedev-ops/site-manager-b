@@ -30,7 +30,7 @@ class SiteService {
             where.organizationId = params.organizationId;
         // If user is not admin/super admin, only show assigned sites
         if (params.userId && params.role !== types_1.UserRole.SUPER_ADMIN && params.role !== types_1.UserRole.ADMIN) {
-            where.users = {
+            where.siteUsers = {
                 some: {
                     userId: params.userId,
                 },

@@ -33,7 +33,9 @@ class ReportController {
                 siteId,
                 supervisorId,
                 status,
-                organizationId
+                organizationId,
+                userId: req.user?.id,
+                role: req.user?.role
             });
             res.json({ success: true, ...result });
         }

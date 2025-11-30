@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ReportService = void 0;
 const database_1 = __importDefault(require("../config/database"));
+const types_1 = require("../types");
 class ReportService {
     async create(data) {
         const report = await database_1.default.report.create({
@@ -34,6 +35,16 @@ class ReportService {
         if (params.organizationId) {
             where.supervisor = {
                 organizationId: params.organizationId
+            };
+        }
+        // If client or sub admin, only show reports for assigned sites
+        if ((params.role === types_1.UserRole.CLIENT || params.role === types_1.UserRole.SUB_ADMIN) && params.userId) {
+            where.site = {
+                siteUsers: {
+                    some: {
+                        userId: params.userId
+                    }
+                }
             };
         }
         const [reports, total] = await Promise.all([

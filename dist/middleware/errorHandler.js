@@ -1,8 +1,22 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.errorHandler = void 0;
+const logger_1 = __importDefault(require("../utils/logger"));
 const errorHandler = (err, req, res, next) => {
-    console.error('Error:', err);
+    // Enrich log with request context
+    const meta = {
+        method: req.method,
+        url: req.originalUrl,
+        ip: req.ip,
+        body: req.body,
+        params: req.params,
+        query: req.query,
+        user: req.user?.id || null,
+    };
+    logger_1.default.error(err.message || 'Unhandled error', { ...meta, stack: err.stack, err });
     // Prisma errors
     if (err.code === 'P2002') {
         return res.status(409).json({

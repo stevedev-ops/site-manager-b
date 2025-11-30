@@ -1,4 +1,4 @@
-import { PaginationParams, PaginatedResponse } from '../types';
+import { PaginationParams, PaginatedResponse, UserRole } from '../types';
 export declare class ReportService {
     create(data: any): Promise<{
         site: {
@@ -26,6 +26,8 @@ export declare class ReportService {
         supervisorId?: string;
         status?: string;
         organizationId?: string;
+        userId?: string;
+        role?: UserRole;
     }): Promise<PaginatedResponse<any>>;
     findById(id: string): Promise<{
         comments: ({

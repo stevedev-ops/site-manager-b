@@ -1,6 +1,6 @@
 export declare const config: {
     port: number;
-    nodeEnv: string;
+    nodeEnv: "development" | "production" | "test";
     jwt: {
         secret: string;
         refreshSecret: string;

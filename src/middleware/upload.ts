@@ -1,6 +1,7 @@
 import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
+import { Request } from 'express';
 import { config } from '../config/env';
 
 // Ensure storage directory exists
@@ -11,7 +12,7 @@ if (!fs.existsSync(storagePath)) {
 
 // Configure multer storage
 const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
+    destination: (req: Request, file: Express.Multer.File, cb: (error: Error | null, destination?: string) => void) => {
         let folder = 'uploads';
 
         // Organize by file type
@@ -30,14 +31,14 @@ const storage = multer.diskStorage({
 
         cb(null, uploadPath);
     },
-    filename: (req, file, cb) => {
+    filename: (req: Request, file: Express.Multer.File, cb: (error: Error | null, filename?: string) => void) => {
         const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
         cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));
     },
 });
 
 // File filter
-const fileFilter = (req: any, file: Express.Multer.File, cb: multer.FileFilterCallback) => {
+const fileFilter = (req: Request, file: Express.Multer.File, cb: (error: Error | null, acceptFile?: boolean) => void) => {
     const allowedMimes = [
         'image/jpeg',
         'image/png',
