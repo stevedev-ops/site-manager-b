@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/steve/Documents/site-manager-b/logs/.2db1e2a78bc2e9b553767b34fc4fef7f0dfb62ef-audit.json",
+    "files": [
+        {
+            "date": 1764537291832,
+            "name": "/home/steve/Documents/site-manager-b/logs/app-2025-12-01.log",
+            "hash": "063347170eab96a133f1a503d64cda887911594a44e73a9a46a6e245d84b2d92"
+        }
+    ],
+    "hashType": "sha256"
+}
