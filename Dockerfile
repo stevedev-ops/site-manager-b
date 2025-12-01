@@ -8,6 +8,7 @@ COPY package*.json ./
 COPY prisma ./prisma/
 
 # Install dependencies
+RUN apk add --no-cache openssl libc6-compat
 RUN npm ci
 
 # Copy source code
@@ -30,6 +31,7 @@ COPY package*.json ./
 COPY prisma ./prisma/
 
 # Install production dependencies only
+RUN apk add --no-cache openssl libc6-compat
 RUN npm ci --only=production
 
 # Copy Prisma client from builder
