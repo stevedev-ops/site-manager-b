@@ -19,6 +19,28 @@ app.use(express.urlencoded({ extended: true }));
 // Global rate limiter
 app.use('/api/', rateLimiter);
 
+// Root route - Health check
+app.get('/', (req, res) => {
+    res.json({
+        status: 'ok',
+        message: 'Construction Site Management API',
+        version: '1.0.0',
+        endpoints: {
+            api: '/api',
+            health: '/health'
+        }
+    });
+});
+
+// Health check endpoint
+app.get('/health', (req, res) => {
+    res.json({
+        status: 'healthy',
+        timestamp: new Date().toISOString(),
+        uptime: process.uptime()
+    });
+});
+
 // Routes
 app.use('/api', routes);
 

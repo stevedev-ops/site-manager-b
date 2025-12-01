@@ -43,5 +43,5 @@ COPY --from=builder /app/dist ./dist
 # Expose port
 EXPOSE 5000
 
-# Run migrations and start server
-CMD ["sh", "-c", "npx prisma migrate deploy && node dist/server.js"]
+# Generate Prisma client, run migrations, and start server
+CMD ["sh", "-c", "npx prisma generate && npx prisma migrate deploy && node dist/server.js"]
