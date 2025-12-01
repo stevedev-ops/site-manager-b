@@ -33,8 +33,6 @@ COPY prisma ./prisma/
 # Install production dependencies only
 RUN apk add --no-cache openssl libc6-compat
 RUN npm ci --only=production
-# Install ts-node for seeding
-RUN npm install ts-node
 
 # Copy Prisma client from builder
 COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
