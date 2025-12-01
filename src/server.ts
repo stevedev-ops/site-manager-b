@@ -13,7 +13,7 @@ app.set('trust proxy', 1);
 
 // Middleware
 app.use(cors({
-    origin: [config.cors.origin, 'http://localhost:3000', 'http://localhost:5173'],
+    origin: [config.cors.origin, 'http://localhost:3000', 'http://localhost:5173', 'https://site-mananger-f.vercel.app'],
     credentials: true
 }));
 app.use(express.json());
