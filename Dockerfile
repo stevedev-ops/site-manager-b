@@ -33,6 +33,8 @@ COPY prisma ./prisma/
 # Install production dependencies only
 RUN apk add --no-cache openssl libc6-compat
 RUN npm ci --only=production
+# Install ts-node for seeding
+RUN npm install ts-node
 
 # Copy Prisma client from builder
 COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
@@ -43,5 +45,5 @@ COPY --from=builder /app/dist ./dist
 # Expose port
 EXPOSE 5000
 
-# Generate Prisma client, run migrations, and start server
-CMD ["sh", "-c", "npx prisma generate && npx prisma migrate deploy && node dist/server.js"]
+# Generate Prisma client, run migrations, seed database, and start server
+CMD ["sh", "-c", "npx prisma generate && npx prisma migrate deploy && npx prisma db seed && node dist/server.js"]

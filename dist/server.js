@@ -10,7 +10,9 @@ const errorHandler_1 = require("./middleware/errorHandler");
 const rateLimiter_1 = require("./middleware/rateLimiter");
 const routes_1 = __importDefault(require("./routes"));
 const app = (0, express_1.default)();
-// Middleware
+// Trust proxy - Required when running behind a reverse proxy (e.g., Render, Nginx)
+// This allows express-rate-limit to correctly identify users via X-Forwarded-For header
+app.set('trust proxy', 1);
 // Middleware
 app.use((0, cors_1.default)({
     origin: [env_1.config.cors.origin, 'http://localhost:3000', 'http://localhost:5173'],

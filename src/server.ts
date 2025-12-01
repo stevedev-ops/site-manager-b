@@ -7,7 +7,10 @@ import routes from './routes';
 
 const app: Application = express();
 
-// Middleware
+// Trust proxy - Required when running behind a reverse proxy (e.g., Render, Nginx)
+// This allows express-rate-limit to correctly identify users via X-Forwarded-For header
+app.set('trust proxy', 1);
+
 // Middleware
 app.use(cors({
     origin: [config.cors.origin, 'http://localhost:3000', 'http://localhost:5173'],
